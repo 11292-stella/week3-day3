@@ -20,11 +20,11 @@ public class Location {
     }
 
 
-    public Location(int id, String nome, String citta, List<Evento> eventi) {
-        this.id = id;
+    public Location( String nome, String citta ) {
+        //this.id = id;
         this.nome = nome;
         this.citta = citta;
-        this.eventi = eventi;
+
     }
 
     public int getId() {

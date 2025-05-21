@@ -4,6 +4,7 @@ import Enumeration.Sesso;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -26,14 +27,14 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(int id, String nome, String cognome, String email, LocalDate dataDiNascita, Sesso sesso, List<Partecipazione> partecipazioni) {
-        this.id = id;
+    public Persona( String nome, String cognome, String email, LocalDate dataDiNascita, Sesso sesso) {
+        //this.id = id;
         this.nome = nome;
         this.cognome = cognome;
         this.email = email;
         this.dataDiNascita = dataDiNascita;
         this.sesso = sesso;
-        this.partecipazioni = partecipazioni;
+        this.partecipazioni = new ArrayList<>();
     }
 
     public int getId() {

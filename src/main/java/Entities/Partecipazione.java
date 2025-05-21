@@ -16,7 +16,7 @@ public class Partecipazione {
 
     @ManyToOne
     @JoinColumn(name = "evento_id")
-    private String evento;
+    private Evento evento;
 
     @Enumerated(EnumType.STRING)
     private Stato stato;
@@ -24,8 +24,8 @@ public class Partecipazione {
     public Partecipazione() {
     }
 
-    public Partecipazione(int id, Persona persona, String evento, Stato stato) {
-        this.id = id;
+    public Partecipazione( Persona persona, Evento evento, Stato stato) {
+        //this.id = id;
         this.persona = persona;
         this.evento = evento;
         this.stato = stato;
@@ -47,11 +47,11 @@ public class Partecipazione {
         this.persona = persona;
     }
 
-    public String getEvento() {
+    public Evento getEvento() {
         return evento;
     }
 
-    public void setEvento(String evento) {
+    public void setEvento(Evento evento) {
         this.evento = evento;
     }
 

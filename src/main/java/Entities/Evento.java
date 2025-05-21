@@ -3,6 +3,7 @@ package Entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -26,12 +27,12 @@ public class Evento {
     public Evento() {
     }
 
-    public Evento(int id, String titolo, LocalDate data, String descrizione, List<Partecipazione> partecipazioni, Location location) {
-        this.id = id;
+    public Evento( String titolo, LocalDate data, String descrizione, Location location) {
+        //this.id = id;
         this.titolo = titolo;
         this.data = data;
         this.descrizione = descrizione;
-        this.partecipazioni = partecipazioni;
+        this.partecipazioni =  new ArrayList<>();
         this.location = location;
     }
 
